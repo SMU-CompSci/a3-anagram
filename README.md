@@ -70,19 +70,19 @@ Create a class named **`AnagramChecking`**, which runs your **`main`** method.
 1. **Read two non-empty strings** from standard input. If the user enters an empty string, **prompt again** until a non-empty string is provided.
 2. **Normalize case** (convert to all lower or all upper) for both strings.
 3. **Declare two integer arrays of size 26** (initialized to zero) to hold counts of letters ‘a’..‘z’ for each string.
-4. **Call** `getCountsOfAlphabets(String str, int[] count)` for each string to fill an array.
-5. **Call** `nonRecursiveCountCheck(int[] count_1, int[] count_2)` and **print** the boolean result.
-6. **Call** `recursiveCountCheck(int[] count_1, int[] count_2, int char_index)` and **print** the boolean result. (Use an extra parameter such as `char_index` for the current comparison position.)
+4. **Call** `getCountsOfAlphabets (String str, int[] count)` for each string to fill an array.
+5. **Call** `nonRecursiveCountCheck (int[] count1, int[] count2)` and **print** the boolean result.
+6. **Call** `recursiveCountCheck (int[] count1, int[] count2, int char_index)` and **print** the boolean result. (Use an extra parameter such as `char_index` for the current comparison position.)
 
 ### Required methods
 
-* `void getCountsOfAlphabets(String str, int[] count)`
+* `public static void getCountsOfAlphabets (String str, int[] count)`
   Populate `counts[i]` with the number of occurrences of the letter corresponding to `i` (`0 -> 'a'`, `1 -> 'b'`, …, `25 -> 'z'`) found in `s`. Ignore all non-alphabetic characters.
 
-* `boolean nonRecursiveCountCheck(int[] count_1, int[] count_2)`
+* `public static boolean nonRecursiveCountCheck (int[] count1, int[] count2) `
   Return `true` iff (if-and-only-if) the arrays are the **same length** and contain the **same value at every index**.
 
-* `boolean recursiveCountCheck(int[] count_1, int[] count_2, int char_index)`
+* `public static boolean recursiveCountCheck (int[] count1, int[] count2, int char_index) `
   Return `true` iff the arrays are the **same length** and contain the **same value at every index**, implemented **recursively**.
   *Suggested shape:* base case when `char_index` has reached the array length; otherwise compare at `char_index` and recurse to `char_index + 1`.
 
@@ -145,8 +145,8 @@ Recursive count check: Are the two strings anagrams? true
 **Explanation**
 
 * **Letter Array :** `[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]`
-* **Count Array 1:** `[2,0,1,1,1,0,0,0,1,0,0,0,1,1,0,0,0,1,2,1,0,0,0,0,0,0]`
-* **Count Array 2:** `[2,0,1,1,1,0,0,0,1,0,0,0,1,1,0,0,0,1,2,1,0,0,0,0,0,0]`
+* **Count Array 1:** `[2,0,1,1,1,0,0,0,1,0,0,0,1,1,0,0,0,1,1,1,0,0,0,0,0,0]`
+* **Count Array 2:** `[2,0,1,1,1,0,0,0,1,0,0,0,1,1,0,0,0,1,1,1,0,0,0,0,0,0]`
 * Both count arrays have the same length, and match the same value at each index
 
 
